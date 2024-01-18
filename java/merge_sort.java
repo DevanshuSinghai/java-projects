@@ -51,6 +51,7 @@ public class merge_sort {
         while(i<l_len){
             arr[k]=left_arr[i];//if any element is left in left sub array it will be stored using this loop
             i++;k++;
+            
         }
         while(j<r_len){
             arr[k]=right_arr[j];//if any element is left in right sub array it will be stored using this loop
