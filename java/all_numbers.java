@@ -14,7 +14,11 @@ public class all_numbers {
                     System.out.print("\nnumber is automorphic");
                 else System.out.println("not automorphic");
                 break;
-        
+            case 2:
+                if(obj.palindrome(n))
+                    System.out.println("number is palindrome ");
+                else System.out.println("Number is not palindrome ");
+                break;
             default:
                 System.out.println("enter correct number");
                 break;
@@ -37,4 +41,11 @@ public class all_numbers {
             return true;
         else return false;
     }    
+    boolean palindrome(int n){
+        String st= Integer.toString(n);
+        StringBuffer sb =new StringBuffer(st);
+        if(st.equals(sb.reverse().toString()))
+            return true;
+        else return false;
+    }
 }
