@@ -43,7 +43,7 @@ public class all_numbers {
     }    
     boolean palindrome(int n){
         String s= Integer.toString(n);
-        StringBuffer sb =new StringBuffer(st);
+        StringBuffer sb =new StringBuffer(s);
         if(s.equals(sb.reverse().toString()))
             return true;
         else return false;
