@@ -42,9 +42,9 @@ public class all_numbers {
         else return false;
     }    
     boolean palindrome(int n){
-        String st= Integer.toString(n);
+        String s= Integer.toString(n);
         StringBuffer sb =new StringBuffer(st);
-        if(st.equals(sb.reverse().toString()))
+        if(s.equals(sb.reverse().toString()))
             return true;
         else return false;
     }
