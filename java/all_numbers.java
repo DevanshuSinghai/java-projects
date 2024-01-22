@@ -33,7 +33,17 @@ public class all_numbers {
                 if(obj.tech(n))
                     System.out.println("number is tech ");
                 else System.out.println("Number is not tech ");
-                break;        
+                break;  
+            case 6:
+                if(obj.fascinating(n))
+                    System.out.println("number is fascinating ");
+                else System.out.println("Number is not fascinating ");
+                break;    
+            case 7:
+                if(obj.iskieth(n))
+                    System.out.println("number is keith ");
+                else System.out.println("Number is not keith ");
+                break;  
             default:
                 System.out.println("enter correct number");
                 break;
@@ -103,5 +113,51 @@ public class all_numbers {
             return true;
         return false;
     } 
+    boolean fascinating(int n){
+        if (find_length(n)<3)
+            return false;
+        String add_num= Integer.toString(n)+Integer.toString(n*2)+Integer.toString(n*3);
+        if(add_num.length()!=9)
+            return false;
+        int arr[]=new int[9];
+        for(int i=0;i<9;i++){
+            for(char j='1';j<='9';j++){
+                if (add_num.charAt(i)==j) {
+                    arr[j-49]++;
+                }
+        }}
+        for(int i=0;i<9;i++){
+            if(arr[i]!=1)
+                return false;
+        }
+        return true;
+    }
+    boolean iskieth(int n){
+        int temp=n,i=find_length(n);
+        int arr[]=new int[find_length(n)];
+        while (temp>0) {
+            arr[--i]=temp%10;
+            temp/=10;
+        }
+        if(keith(arr,n))
+            return true;
+        return false;
+    }
+    boolean keith(int arr[],int n){
+        int sum=0;
+        
+        if(arr[find_length(n)-1]==n)
+            return true;
+        if(arr[find_length(n)-1]>n)
+            return false;
+        for(int i=0;i<find_length(n);i++){
+            sum+=arr[i];
+        }
+        for(int i=0;i<find_length(n)-1;i++){
+            arr[i]=arr[i+1];
+        }
+        arr[find_length(n)-1]=sum;
+        return keith(arr, n);
+        }
 }
 
