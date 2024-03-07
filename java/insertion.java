@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.*; // Import the scanner class
 public class insertion{
     public static void main(String [] args){
         int a[],n;
